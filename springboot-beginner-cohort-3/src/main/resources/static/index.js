@@ -12,7 +12,7 @@ var users=[
     }
 ]
 var id=0;
-function toggleuser(){
+function toggleUser(){
     id=(id+1) % users.length;
     var userImage = document.getElementById("user-image");
      var userName = document.getElementById("user-name");
@@ -21,5 +21,23 @@ function toggleuser(){
      userImage.scr = users[id].image;
      userName.innerHTML = users[id].name;
      userGender.innerHTML = users[id].gender;
-     
+
+}
+function randomUser(){
+    fetch("https://randomuser.me/api/")
+    .then(function[res]{
+       return res.json();
+    })
+    .then(function(data){
+        var userImage = document.getElementById("user-image");
+     var userName = document.getElementById("user-name");
+     var userGender = document.getElementById("user-gender");
+
+     userImage.scr = data.resulta[0].picture.large;
+     userName.innerHTML = data.results[0].name.first + " " + data.results[0].name.second;
+     userGender.innerHTML = data.results[0].gender;
+    })
+    .error(function(err){
+       console.log(err);
+    })
 }

@@ -4,7 +4,7 @@ h1{
 }
 .navbar{
     border-width: 2px;
-    border-color:aquamarine;
+    border-color:rgba(9, 9, 9, 0);
     border-style: solid;
     padding: 20px;
     text-align:center;
@@ -15,14 +15,14 @@ h1{
     color:royalblue;
 }
 .navbar a:hover{
-    color:rgb(6, 55, 95);
+    color:rgb(135, 195, 244);
 }
 body{
     margin:0px;
-    background-color: #eaeab1;
+    background-color: #dc7ea8;
 }
 .card{
-    border: 2px solid grey;
+    border: 2px solid rgb(12, 3, 3);
     width:350px;
     text-align: center;
     margin-top: 80px;
